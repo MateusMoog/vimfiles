@@ -96,7 +96,6 @@ Plug 'Shougo/deoplete.nvim'
 Plug 'carlitux/deoplete-ternjs'
 Plug 'zchee/deoplete-go', { 'do': 'make' }
 " Plug 'zchee/deoplete-clang'
-Plug 'awetzel/elixir.nvim'
 Plug 'OmniSharp/omnisharp-vim'
 Plug 'Robzz/deoplete-omnisharp'
 Plug 'mhartington/deoplete-typescript'
@@ -448,8 +447,8 @@ let g:vimwiki_ext2syntax = {'.md': 'markdown',
 " }}}
 " ##### OmniSharp {{{
 let g:OmniSharp_selector_ui = 'fzf'
-let g:OmniSharp_server_type = 'v1'
 let g:OmniSharp_server_type = 'roslyn'
+let g:OmniSharp_timeout = 10
 
 augroup omnisharp
   autocmd!
@@ -523,10 +522,10 @@ autocmd FileType erlang set shiftwidth=2
 autocmd FileType erlang set tabstop=2
 " }}}
 " ##### Elixir {{{
-autocmd BufRead,BufNewFile *.ex set filetype=elixir
-autocmd BufRead,BufNewFile *.exs set filetype=elixir
 autocmd FileType elixir set shiftwidth=2
 autocmd FileType elixir set tabstop=2
+autocmd FileType elixir set tabstop=2
+autocmd FileType elixir set expandtab
 " }}}
 " ##### Go {{{
 autocmd FileType go set foldmethod=syntax
